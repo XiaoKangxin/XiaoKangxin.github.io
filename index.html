@@ -73,7 +73,7 @@
     <!--内容-->
     <div class="video">
         <h5>推荐视频>></h5>
-        <div class="media">
+        <div class="media" data-toggle="modal" data-target="#myModal">
             <div class="media-left">
                 <a href="#"><img class="media-object" src="./image/l.jpg" alt="..."></a>
             </div>
@@ -82,7 +82,7 @@
                 已经深造结束的的林志玲在摄影师好友的引荐下，前往日本留学三个月，期间她还。。。
             </div>
         </div>
-        <div class="media">
+        <div class="media" data-toggle="modal" data-target="#myModal">
             <div class="media-left">
                 <a href="#"><img class="media-object" src="./image/l.jpg" alt="..."></a>
             </div>
@@ -91,13 +91,35 @@
                 已经深造结束的的林志玲在摄影师好友的引荐下，前往日本留学三个月，期间她还。。。
             </div>
         </div>
-        <div class="media">
+        <div class="media" data-toggle="modal" data-target="#myModal">
             <div class="media-left">
                 <a href="#"><img class="media-object" src="./image/l.jpg" alt="..."></a>
             </div>
             <div class="media-body">
                 <h4 class="media-heading">林志玲的春天</h4>
                 已经深造结束的的林志玲在摄影师好友的引荐下，前往日本留学三个月，期间她还。。。
+            </div>
+        </div>
+        <!--模态框-->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">林志玲的春天</h4>
+                    </div>
+                    <div class="modal-body">
+                        <video width="800" height="300" controls class="movie" poster="./image/1.gif" style="width:100%">
+                        <!--./image/1.gif-->
+                        <source src="./image/hahaha.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">加入收藏</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
