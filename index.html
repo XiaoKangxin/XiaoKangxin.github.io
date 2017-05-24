@@ -15,63 +15,17 @@
         <div class="animated tada j_animated">
             <p class="start">欢迎来到谢康新的个人主页</p>
         </div>
-        <video width="320" height="240" controls class="movie" poster="./image/1.gif">
-            <source src="./image/hahaha.mp4" type="video/mp4">
+        <video width="800" height="600" controls class="movie" poster="./image/1.gif" style="width:100%">
+            <!--./image/1.gif-->
+            <!--<source src="./image/hahaha.mp4" type="video/mp4">-->
         </video>
         <img src="./image/last.png" alt="" class="image">
     </main>
+    <audio src="./image/moment.mp3" controls="controls" autoplay style="visibility: hidden"></audio>
     <script src="./js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('.start').text('接下來讓我帶你進入Yellow World').css({ color: '#ffeb62' });
-                $('.j_animated').removeClass('tada').addClass('bounceIn');
-                next();
-            }, 2500);
-            var times
-            function next() {
-                setTimeout(function () {
-                    $('.start').text('跟我倒數5個數').css({ color: '#f31207' });
-                    $('.j_animated').removeClass('bounceIn').addClass('flip');
-                    countDown();
-                }, 2500);
-            }
-            function countDown() {
-                setTimeout(function () {
-                    times = setInterval(countDown1, 1000);
-                }, 1000);
-            }
-            var a = 5
-            function countDown1() {
-                if(a%2==1){
-                    $('.start').text(a).css({ color: '#f31207', 'font-size': '50px' });
-                    $('.j_animated').removeClass('flip').addClass('bounceIn');
-                }else{
-                    $('.start').text(a).css({ color: '#f31207', 'font-size': '50px' });
-                    $('.j_animated').removeClass('bounceIn').addClass('flip');
-                }
-                --a
-                if (a == -1) {
-                    console.log(a)
-                    clearInterval(times)
-                    movie()
-                }
-            }
-            function movie(){
-                $('.start').text('接下来你将看到一部小电影').css({ color: '#ffeb62', 'font-size': '30px' });
-                $('.movie').css({'display':'block'})
-                moviePlay()
-            }
-            function moviePlay(){
-                $('.start').text('点击屏幕开始播放吧').css({ color: '#f31207', 'font-size': '30px' });
-                $('body').click(function(){
-                    $('.start').text('0.0断网了。。。').css({ color: '#f31207', 'font-size': '30px' });
-//                     $('.image').css({'display':'block'})
-//                     $('.movie').css({'display':'none'})
-                })
-            }
-        });
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1261363976'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261363976%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
     </script>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261363976'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261363976%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 <html>

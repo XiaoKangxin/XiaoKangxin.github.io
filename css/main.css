@@ -2,16 +2,20 @@
     margin: 0;
     padding: 0
 }
-body{
+body,html{
     background-color: #000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 main{
+    height: 100%;
     width: 80%;
-    margin: 100px auto;
-    text-align: center
+    margin: 10rem auto 0 auto;
+    text-align: center;
 }
 .start{
-    font-size: 40px;
+    font-size: 5rem;
     color:#388a38;
     text-align: center;
     height: 100px
@@ -22,5 +26,7 @@ main{
     margin: 0 auto
 }
 .image{
+    width: 500px;
+    margin: 0 auto;  
     display: none;
 }
