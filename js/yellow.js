@@ -7,6 +7,7 @@ window.onload = function () {
             $('.img').css({'display':'block'})
             $('.mima').css({'display':'none'})
             $('body').css({'background-color':'#fff'})
+            window.location.href="homepage.html"
         }
     })
     /*

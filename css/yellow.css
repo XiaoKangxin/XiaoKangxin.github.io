@@ -60,24 +60,3 @@ ul{
     padding-bottom: 8px;
     line-height: 30px
 }
-.header{
-    display: none
-}
-.focus{
-    display: none
-}
-.video{
-    display: none
-}
-.img{
-    display: none
-}
-.mima{
-    width: 300px;
-    height: 300px;
-    margin: 12rem auto;
-    text-align: center;
-}
-body{
-    background-color: black
-}
