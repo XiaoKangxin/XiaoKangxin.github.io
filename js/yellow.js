@@ -1,4 +1,14 @@
 window.onload = function () {
+    $('.j_yes').click(function(){
+        if($("input").val()=='123456'){
+            $('.header').css({'display':'block'})
+            $('.focus').css({'display':'block'})
+            $('.video').css({'display':'block'})
+            $('.img').css({'display':'block'})
+            $('.mima').css({'display':'none'})
+            $('body').css({'background-color':'#fff'})
+        }
+    })
     /*
         1）设置ul宽度，达到水平排列的效果
         2）水平轮播效果
@@ -9,7 +19,7 @@ window.onload = function () {
             * 把第一张复制到最后
             * 当滚动到复制那张图片时，瞬间重置回初始状态，并把index改成1
      */
-
+    
     var focus = document.getElementsByClassName('focus')[0];
     var ul = focus.children[0];
 
