@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0
+}
+h1{
+    text-align: center
+}
+div{
+    width: 80%;
+    margin: 2rem auto;
+}
+p{
+    border: 1px solid #999999;
+    line-height: 1.6rem;
+    text-align: center;
+    border-top: none;
+}
+span{
+    position: relative;
+    display: inline-block;
+    width: calc(20% - 8px);
+    border-right: 1px solid #999999;
+}
+span:nth-child(1){
+    width: 40%;
+}
+span:last-child{
+    border: none;
+}
+input{
+    outline: none;
+    width: 100%;
+    margin-left: -4px;
+    line-height: 1.6rem;
+    border: none;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    text-align: center
+}
