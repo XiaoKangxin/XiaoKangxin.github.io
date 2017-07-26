@@ -7,7 +7,8 @@ h1{
 }
 div{
     padding: 2rem 0.64rem;
-    min-width: 740px;
+    width: 740px;
+    margin: 0 auto;
     font-size: 14px；
 }
 span:nth-child(1){
