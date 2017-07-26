@@ -1,59 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/count.css">
     <title>记账</title>
+    <style>
+        td {
+            border: 1px solid #999999;
+            width: 30px;
+            height: 20px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .text-left {
+            float: left;
+        }
+
+        .text-right {
+            float: right;
+        }
+
+        .clear {
+            clear: both
+        }
+
+        .long {
+            width: 160px;
+        }
+
+        .short {
+            width: 30px;
+        }
+
+        .medium {
+            width: 60px;
+        }
+
+        .mediumPlus {
+            width: 100px;
+        }
+
+        td span input {
+            width: 60px;
+            text-align: left;
+        }
+    </style>
 </head>
-<body> 
+
+<body>
     <div>
-        <h1>宝苹数算</h1>
-        <p style="border-top:1px solid #999999">
-            <span>商品名称</span>
-            <span>单价</span>
-            <span>数量</span>
-            <span>总价</span>
-        </p>
+        <h1>新东方</h1>
         <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
+            <span class="text-left">客户：<input type="text" style="width:100px;text-align:left"></span>
+            <span class="text-right"><input type="text" style="width:60px">年<input type="text" style="width:40px">月<input type="text" style="width:40px">日</span>
+            <p class="clear"></p>
         </p>
-        <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
-        </p>
-        <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
-        </p>
-        <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
-        </p>
-        <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
-        </p>
-        <p>
-            <span><input type="" name="" value=""></span>
-            <span><input type="" name="" value="" class="price"></span>
-            <span><input type="" name="" value="" class="count"></span>
-            <span><input type="" name="" value="" class="total" readonly></span>
-        </p>
+        <table border="1">
+            <tr>
+                <td rowspan="2" class="medium">单号</td>
+                <td rowspan="2" class="long">规格</td>
+                <td rowspan="2" class="medium">单位</td>
+                <td rowspan="2" class="medium">数量</td>
+                <td rowspan="2" class="medium">单价</td>
+                <td colspan="8" class="medium">金额</td>
+                <td rowspan="10" class="mediumPlus">备注</td>
+            </tr>
+            <tr>
+                <td class="short">拾</td>
+                <td class="short">万</td>
+                <td>仟</td>
+                <td>佰</td>
+                <td>拾</td>
+                <td>元</td>
+                <td>角</td>
+                <td>分</td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text" oninput="a(event)"></td>
+                <td><input type="text" oninput="b(event)"></td>
+                <td><input type="text" class="total1"></td>
+                <td><input type="text" class="total2"></td>
+                <td><input type="text" class="total3"></td>
+                <td><input type="text" class="total4"></td>
+                <td><input type="text" class="total5"></td>
+                <td><input type="text" class="total6"></td>
+                <td><input type="text" class="total7"></td>
+                <td><input type="text" class="total8"></td>
+            </tr>
+            <tr>
+                <td colspan="14">
+                    <span style=" text-align: left" class="footer">合计金额：<input type="text">拾：<input type="text">万：<input type="text">仟：<input type="text">佰：<input type="text">拾：<input type="text">￥<span class="total">______</span>元</span>
+                </td>
+            </tr>
+        </table>
+        <p style="text-align:right">收货人签名：<input type="text" style="width:100px"></p>
     </div>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/count.js"></script>
+    <!--<script src="./js/count.js"></script>-->
+    <script>
+        var arr = []
+        function a(event) {
+            var price = $(event.target).parent().next().find('input').val();
+            var num = $(event.target).val();
+            var total = price * num;
+            if (total.toString().split('.')[0].length == 6) {
+                $(event.target).parent().parent().find('.total1').val((total % 1000000).toString()[0]);
+                $(event.target).parent().parent().find('.total2').val((total % 100000).toString()[0]);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 5) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val((total % 100000).toString()[0]);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 4) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 3) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 2) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val(0);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 1) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val(0);
+                $(event.target).parent().parent().find('.total5').val(0);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+
+
+            if (total.toString().split('.')[1]) {
+                if (total.toString().split('.')[1].length == 2) {
+                    $(event.target).parent().parent().find('.total7').val((total.toString().split('.')[1][0]));
+                    $(event.target).parent().parent().find('.total8').val((total.toString().split('.')[1][1]));
+                } else {
+                    $(event.target).parent().parent().find('.total7').val((total).toString()[0]);
+                    $(event.target).parent().parent().find('.total8').val(0);
+                }
+
+            } else {
+                $(event.target).parent().parent().find('.total7').val(0);
+                $(event.target).parent().parent().find('.total8').val(0);
+            }
+
+        }
+
+
+
+
+
+
+        function b(event) {
+            var price = $(event.target).val();
+            var num = $(event.target).parent().prev().find('input').val();
+            var total = price * num;
+            var index = $(event.target).parent().parent().index();
+            arr[index - 2] = total
+            if (total.toString().split('.')[0].length == 6) {
+                $(event.target).parent().parent().find('.total1').val((total % 1000000).toString()[0]);
+                $(event.target).parent().parent().find('.total2').val((total % 100000).toString()[0]);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 5) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val((total % 100000).toString()[0]);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 4) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val((total % 10000).toString()[0]);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 3) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val((total % 1000).toString()[0]);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 2) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val(0);
+                $(event.target).parent().parent().find('.total5').val((total % 100).toString()[0]);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+            if (total.toString().split('.')[0].length == 1) {
+                $(event.target).parent().parent().find('.total1').val(0);
+                $(event.target).parent().parent().find('.total2').val(0);
+                $(event.target).parent().parent().find('.total3').val(0);
+                $(event.target).parent().parent().find('.total4').val(0);
+                $(event.target).parent().parent().find('.total5').val(0);
+                $(event.target).parent().parent().find('.total6').val((total % 10).toString()[0]);
+            }
+
+
+            if (total.toString().split('.')[1]) {
+                if (total.toString().split('.')[1].length == 2) {
+                    $(event.target).parent().parent().find('.total7').val((total.toString().split('.')[1][0]));
+                    $(event.target).parent().parent().find('.total8').val((total.toString().split('.')[1][1]));
+                } else {
+                    $(event.target).parent().parent().find('.total7').val((total).toString()[0]);
+                    $(event.target).parent().parent().find('.total8').val(0);
+                }
+
+            } else {
+                $(event.target).parent().parent().find('.total7').val(0);
+                $(event.target).parent().parent().find('.total8').val(0);
+            }
+
+            var totalS = 0;
+            for (var i = 0; i < arr.length; i++) {
+                totalS += arr[i];
+            }
+            $('.total').text(totalS)
+        }
+    </script>
 </body>
+
 </html>
