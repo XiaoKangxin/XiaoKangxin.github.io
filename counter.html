@@ -48,7 +48,7 @@
         }
 
         td span input {
-            width: 60px;
+            width: 50px;
             text-align: left;
         }
     </style>
@@ -204,7 +204,7 @@
             </tr>
             <tr>
                 <td colspan="14">
-                    <span style=" text-align: left" class="footer">合计金额：<input type="text">拾：<input type="text">万：<input type="text">仟：<input type="text">佰：<input type="text">拾：<input type="text">￥<span class="total">______</span>元</span>
+                    <span style=" text-align: left" class="footer">合计金额：<input type="text">拾：<input type="text">万：<input type="text">仟：<input type="text">佰：<input type="text">拾：<input type="text">￥ &nbsp;&nbsp;&nbsp;<span class="total">______</span>&nbsp;&nbsp;&nbsp;元</span>
                 </td>
             </tr>
         </table>
@@ -282,6 +282,14 @@
                 $(event.target).parent().parent().find('.total8').val(0);
             }
 
+            var index = $(event.target).parent().parent().index();
+            arr[index - 2] = total
+            var totalS = 0;
+            for (var i = 0; i < arr.length; i++) {
+                totalS += arr[i];
+            }
+            $('.total').text(totalS.toFixed(2))
+
         }
 
 
@@ -293,8 +301,6 @@
             var price = $(event.target).val();
             var num = $(event.target).parent().prev().find('input').val();
             var total = price * num;
-            var index = $(event.target).parent().parent().index();
-            arr[index - 2] = total
             if (total.toString().split('.')[0].length == 6) {
                 $(event.target).parent().parent().find('.total1').val((total % 1000000).toString()[0]);
                 $(event.target).parent().parent().find('.total2').val((total % 100000).toString()[0]);
@@ -358,12 +364,13 @@
                 $(event.target).parent().parent().find('.total7').val(0);
                 $(event.target).parent().parent().find('.total8').val(0);
             }
-
+            var index = $(event.target).parent().parent().index();
+            arr[index - 2] = total
             var totalS = 0;
             for (var i = 0; i < arr.length; i++) {
                 totalS += arr[i];
             }
-            $('.total').text(totalS)
+            $('.total').text(totalS.toFixed(2))
         }
     </script>
 </body>
