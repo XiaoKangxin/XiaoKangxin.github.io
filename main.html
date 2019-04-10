@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="main" id="app">
-        <div v-show="isHtml" id="capture">
+        <div id="capture">
             <header>
                 <img src="./image/head.png" alt="">
             </header>
@@ -48,7 +48,7 @@
             </div>
         </div>
         <img src="" alt="" id='lastImg'>
-        <div class="ftS28 pdLR30" v-if="isEdit" style="padding: 0.64rem">
+        <div class="ftS28 pdLR30" style="padding: 0.64rem">
             <div>
                 <p>标题：</p>
                 <el-input v-model="title" placeholder="请输入内容"></el-input>
@@ -92,35 +92,9 @@
                     this.message.push('')
                 },
                 beImage(){
-                    this.isEdit = false
-                    this.isHtml = true
-                    // html2canvas(document.querySelector("#capture")).then(canvas => {
-                    //     var o = document.getElementById("capture");
-                    //     var h = o.offsetHeight; //高度
-                    //     var w = o.offsetWidth; //宽度
-                    //     // 生成一个a元素
-                    //     var img = document.createElement('img');
-                    //     var url = canvas.toDataURL('image/png')
-                    //     // 将生成的URL设置为a.href属性
-                    //     img.src = url;
-                    //     img.width = w;
-                    //     img.height = h - 5;
-                    //     $('.j_maskBox').find(".send-btn").before(img);
-                    //     $('.mask').removeClass('hide');
-                    // })   
-                    html2canvas(document.getElementById("capture"), {
-                        allowTaint: true, //允许污染
-                        taintTest: true, //在渲染前测试图片(没整明白有啥用)
-                        useCORS: true, //使用跨域(当allowTaint为true时这段代码没什么用,下面解释)
-                        background: "#fff",
-                        onrendered: function (canvas) {
-                            imgBlob = canvas.toDataURL('image/jpeg', 1.0); //将图片转为base64
-                            // img.src = url;
-                            console.log(imgBlob)
-                            $('#lastImg').attr('src',imgBlob);
-                            // imgBlob = imgBlob.toString().substring(imgBlob.indexOf(",") + 1);//截取base64以便上传
-                        }
-                    })
+                    html2canvas(document.getElementById('capture')).then((canvas)=> {
+                        document.body.appendChild(canvas)
+                    });
                 }
             },
             created() {
