@@ -16,13 +16,13 @@
 </head>
 <body>
     <div class="main" id="app">
-        <div id="capture">
+        <div id="capture" v-show='isHtml'>
             <header>
                 <img src="./image/head.png" alt="">
             </header>
             <div>
                 <div style="padding: 0.86rem 0 0 0.2133rem;line-height: 0.71733rem;" class="ftS28">
-                    <span class="tiem-icon"></span>
+                    <span class="el-icon-time"></span>
                     <span><span class="j_date">2019-3-14</span><span style="margin-left:0.64rem" class="j_week">星期四</span></span>
                     <p class="clear"></p>
                 </div>
@@ -47,8 +47,7 @@
                 </div>
             </div>
         </div>
-        <img src="" alt="" id='lastImg'>
-        <div class="ftS28 pdLR30" style="padding: 0.64rem">
+        <div class="ftS28 pdLR30" style="padding: 0.64rem" v-if='isEdit'>
             <div>
                 <p>标题：</p>
                 <el-input v-model="title" placeholder="请输入内容"></el-input>
@@ -92,8 +91,12 @@
                     this.message.push('')
                 },
                 beImage(){
+                    let self = this
+                    self.isEdit = false
+                    self.isHtml = true
                     html2canvas(document.getElementById('capture')).then((canvas)=> {
-                        document.body.appendChild(canvas)
+                        document.getElementById('app').appendChild(canvas)
+                        self.isHtml = false
                     });
                 }
             },
