@@ -71,8 +71,8 @@ body {
 .ftS28{
     font-size: 0.56733rem
 }
-.ftS26{
-  font-size: 0.55rem
+.ftS24{
+  font-size: 0.512rem
 }
 .ftS40{
   font-size: 1rem
@@ -126,7 +126,6 @@ body {
 .footer > div:nth-child(2) {
   width: calc(100% - 7.4666rem);
   padding-right: 15px;
-  font-size: 0.64rem;
   line-height: 1.066rem;
 }
 .el-icon-star-on {
