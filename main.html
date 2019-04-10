@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/element-ui/2.6.1/theme-chalk/index.css">
+    <link rel="stylesheet" href="./css/b.css">
+    <!-- 引入组件库 -->
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/element-ui/2.6.1/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="app">
+        <div v-show="isHtml" id="img">
+            <header>
+                <img src="./image/head.png" alt="">
+            </header>
+            <div>
+                <div style="padding: 0.86rem 0 0 0.2133rem;line-height: 0.91733rem;" class="ftS28">
+                    <span class="tiem-icon"></span>
+                    <span><span class="j_date">2019-3-14</span><span style="margin-left:0.64rem" class="j_week">星期四</span></span>
+                    <p class="clear"></p>
+                </div>
+                <div class="message">
+                    <p class="j_title">{{title}}</p>
+                    <div>
+                        <p class="j_message1" v-for="(item,index) in message" :key='index'>{{item}}</p>
+                    </div>
+                </div>
+                <div style="margin-left: 0.8533rem" class="ftS28">
+                    <span class="flL">重要程度：</span><p class="flL"><span class="el-icon-star-on ftS28"><span class="el-icon-star-on"><span class="el-icon-star-on"><span class="el-icon-star-on"><span class="el-icon-star-on"></span></p>
+                    <p class="clear"></p>
+                </div>
+                <div class="footer">
+                    <div class="flL"><img src="./image/code.png" alt="" id="preview"></div>
+                    <div class="flL">
+                        <img src="./image/footer-right.png" alt="" >
+                        <p>为区块链行业提供最好的服务。</p>
+                        <p>集行业新闻、资讯、行情、数据等一站式区块链产业服务平台。</p>
+                    </div>
+                    <p class="clear"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ftS28 pdLR30" v-if="isEdit" style="padding: 0.64rem">
+            <div>
+                <p>标题：</p>
+                <el-input v-model="title" placeholder="请输入内容"></el-input>
+            </div>
+            <div style="padding-top:0.64rem">
+                <p>内容：</p>
+                <ul>
+                    <ol v-for="(item,index) in message">
+                        <el-input
+                            type="textarea"
+                            autosize
+                            placeholder="请输入内容"
+                            v-model="message[index]">
+                        </el-input>
+                    </ol>
+                </ul>
+                <div class="ftS40"><i class="el-icon-circle-plus" style="color:#21aeee" @click='addMessage'></i></div>
+            </div>
+            <div style="padding-top:0.64rem">
+                <input type="file" id="upload">
+            </div>
+            <div @click="beImage" style="padding-top:0.64rem">
+                <el-button type="primary" plain>生成图片</el-button>
+            </div>
+        </div>
+    </div>
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: function() {
+                return { 
+                    title:'',
+                    message:[''],
+                    fileList:[],
+                    isEdit:true,
+                    isHtml:false,
+                }
+            },
+            methods: {
+                addMessage(){
+                    this.message.push('')
+                },
+                beImage(){
+                    this.isEdit = false
+                    this.isHtml = true
+                    html2canvas(document.querySelector("#img")).then(canvas => {
+                        document.querySelector("#app").appendChild(canvas);
+                        this.isHtml = false
+                    });
+                    
+                }
+            },
+            created() {
+                var myDate = new Date();
+                var week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+                $('.j_date').text(myDate.getFullYear()+'-'+(myDate.getMonth()+ 1) +'-'+ myDate.getDate())
+                $('.j_week').text(week[myDate.getDay()])
+            }
+        })
+        $('#upload').change(function () {
+            // 获取FileList的第一个元素
+            var f = document.getElementById('upload').files[0];
+            src = window.URL.createObjectURL(f);
+            document.getElementById('preview').src = src
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 22.5px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 23.4375px;
+  }
+}
+
+@media only screen and (min-width: 384px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 25.875px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 30px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.42857143;
+  color: #333;
+  background: #f0f0f0;
+}
+.main {
+  width: 100%;
+  min-height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+}
+.ftS28{
+    font-size: 0.56733rem
+}
+.ftS40{
+  font-size: 1rem
+}
+.tiem-icon {
+  float: left;
+  width: 0.91733rem;
+  height: 0.91733rem;
+  background: url("../image/time.png") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-right: 0.40533rem;
+}
+.message {
+  padding: 0.64rem 1.38rem;
+  font-family: 'Adobe 黑体 Std';
+}
+.message > p {
+  font-size: 0.7466rem;
+  word-break: break-all;
+}
+.message div {
+  padding-top: 0.64rem;
+  word-break: break-all;
+  font-size: 0.533rem;
+  text-indent: 2em;
+  line-height: 0.768rem;
+}
+.clear {
+  clear: both;
+}
+.star {
+  float: left;
+  width: 262px;
+  height: 53px;
+  background: url("./image/star.png");
+}
+.flL {
+  float: left;
+}
+.footer {
+  padding: 0.64rem 0;
+}
+.footer > div:nth-child(1) {
+  width: 7.4666rem;
+  padding: 0 0.64rem 0 1.7066rem;
+}
+.footer > div img {
+  width: 100%;
+}
+.footer > div:nth-child(2) {
+  width: calc(100% - 7.4666rem);
+  padding-right: 15px;
+  font-size: 0.3rem;
+  line-height: 1.066rem;
+}
+.el-icon-star-on {
+  color: #fb723c;
+  font-size: 0.64rem;
+}
+.el-icon-time {
+  float: left;
+  font-size: 0.59733rem;
+  margin-right: 15px;
+  line-height: 42px;
+}
+header img {
+  width: 100%;
+  display: block;
+}
+.pdLR30{
+  padding: 0 1rem;
+}
