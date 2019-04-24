@@ -31,7 +31,7 @@
                     <div>
                         <p class="j_message1" v-for="(item,index) in message" :key='index'>{{item}}</p>
                     </div>
-                    <section><img src="" alt="" id="preview2" width="100%"></section>
+                    <section><img src="" alt="" id="preview2" width="100%" style="display:none"></section>
                 </div>
                 <div style="margin-left: 0.8533rem" class="ftS28">
                     <span class="flL">重要程度：</span><p class="flL"><span class="el-icon-star-on ftS28"><span class="el-icon-star-on"><span class="el-icon-star-on"><span class="el-icon-star-on"><span class="el-icon-star-on"></span></p>
@@ -65,7 +65,6 @@
                         </el-input>
                     </ol>
                 </ul>
-                <img src="" alt="">
                 <div class="ftS40"><i class="el-icon-circle-plus" style="color:#21aeee" @click='addMessage'></i></div>
             </div>
             <div style="padding-top:0.64rem">
@@ -117,6 +116,13 @@
             src = window.URL.createObjectURL(f);
             document.getElementById('preview').src = src
 
+            var f2 = document.getElementById('uploadImg').files[0];
+            src2 = window.URL.createObjectURL(f2);
+            document.getElementById('preview2').src = src2
+        });
+        $('#uploadImg').change(function () {
+            // 获取FileList的第一个元素
+            document.getElementById('preview2').style.display  = 'block'
             var f2 = document.getElementById('uploadImg').files[0];
             src2 = window.URL.createObjectURL(f2);
             document.getElementById('preview2').src = src2
